@@ -6,3 +6,28 @@
 本程序运行后无界面，不需要多次运行
 
 ![](https://raw.githubusercontent.com/Shilyx/MultiWeChat/master/Release/test.png)
+
+核心代码都在WeChat.h中：
+
+```cpp
+static void EnableMultiWeChat()
+{
+    HANDLE hMutex = CreateMutexW(NULL, FALSE, L"_WeChat_App_Instance_Identity_Mutex_Name");
+    SID_IDENTIFIER_AUTHORITY SIDAuthWorld = SECURITY_WORLD_SID_AUTHORITY;
+    PSID pEveryoneSID = NULL; // everyone
+    char szBuffer[4096];
+    PACL pAcl = (PACL)szBuffer;
+
+    AllocateAndInitializeSid(
+        &SIDAuthWorld,
+        1,
+        SECURITY_WORLD_RID,
+        0, 0, 0, 0, 0, 0, 0,
+        &pEveryoneSID);
+
+    InitializeAcl(pAcl, sizeof(szBuffer), ACL_REVISION);
+    AddAccessDeniedAce(pAcl, ACL_REVISION, MUTEX_ALL_ACCESS, pEveryoneSID);
+    SetSecurityInfo(hMutex, SE_KERNEL_OBJECT, DACL_SECURITY_INFORMATION, NULL, NULL, pAcl, NULL);
+}
+```
+
