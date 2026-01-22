@@ -31,3 +31,4 @@ static void EnableMultiWeChat()
 }
 ```
 
+2026.1.22 支持4.0
