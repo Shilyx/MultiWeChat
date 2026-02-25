@@ -3,7 +3,7 @@
 	ProjectType="Visual C++"
 	Version="9.00"
 	Name="MultiWeChat"
-	ProjectGUID="{258E7AC1-0251-4D76-8F98-93AE7B32642F}"
+	ProjectGUID="{77C2234F-17A3-4D1A-A42A-37472F8F93FC}"
 	RootNamespace="MultiWeChat"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
@@ -21,8 +21,8 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
-			IntermediateDirectory="$(SolutionDir)generated\$(ProjectName)\$(ConfigurationName)$(PlatformName)\"
+			OutputDirectory="$(SolutionDir)_$(ConfigurationName)"
+			IntermediateDirectory="$(SolutionDir)_generated\$(ProjectName)\$(ConfigurationName)$(PlatformName)\"
 			ConfigurationType="1"
 			CharacterSet="1"
 			>
@@ -44,11 +44,11 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\..\tinyxml2;..\..\..\sqlite;..\..\..\protobuf-2.5.0\src;..\..\..\charconv;..\..\..\boost_1_55_0_HeadersOnly;..\..\..\zlibex2;..\..\..\mysql-dev-5.6\include;..\..\..\libcurl-7.26\include;..\..\..\slxcommon;..\..\..\rapidxml-1.13;..\..\..\libevent-2.0.21-stable\include;..\..\..\ExpatDll\expat_core;..\..\..\zeromq-4.1.1\include;..\..\..\vtd-xml\c++;..\..\..\http_parser;..\..\..\EasyHook 2.6;..\..\..\libxl-3.6.2.0\include_cpp;..\..\..\getopt;..\..\..\fcgi-2.4.1\include;..\..\..\libfcgiwrapper\libfcgiwrapper;..\..\..\deelx;..\..\..\rapidjson\include;..\..\..\Bins\gsoap;..\..\..\InputBox;..\..\..\InterfaceInvokeStat;..\..\..\openssl-1.0.2c-release\$(PlatformName)\include;..\..\..\snappy;..\..\..\poco-1.4.6p4\Net\include;..\..\..\poco-1.4.6p4\Util\include;..\..\..\poco-1.4.6p4\Foundation\include;..\..\..\poco-1.4.6p4\XML\include"
-				PreprocessorDefinitions="WIN32;_WIN32_WINNT=0x500;WINVER=0x500;_DEBUG;_WINDOWS"
+				AdditionalIncludeDirectories=""
+				PreprocessorDefinitions="WIN32;_WIN32_WINNT=0x601;WINVER=0x601;_WIN32_IE=0x500;_DEBUG;_WINDOWS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
-				RuntimeLibrary="3"
+				RuntimeLibrary="1"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
 				DebugInformationFormat="4"
@@ -64,9 +64,9 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="gdiplus.lib Shlwapi.lib Ws2_32.lib Shell32.lib ComCtl32.Lib IPHlpApi.Lib RpcRT4.Lib wldap32.lib PsApi.lib WinMM.Lib WtsApi32.lib Version.lib Snmpapi.lib Mpr.lib Dnsapi.lib Wininet.lib Winhttp.lib"
+				AdditionalDependencies="gdiplus.lib Shlwapi.lib Ws2_32.lib Shell32.lib ComCtl32.Lib IPHlpApi.Lib RpcRT4.Lib wldap32.lib PsApi.lib WinMM.Lib WtsApi32.lib Version.lib Snmpapi.lib Mpr.lib Dnsapi.lib Wininet.lib Winhttp.lib oleacc.lib"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="..\..\..\mysql-dev-5.6\lib$(PlatformName);..\..\..\boost_1_55_0_HeadersOnly\stage\lib$(PlatformName);..\..\..\ExpatDll\Release;..\..\..\zeromq-4.1.1\zeromq_dll\Release;..\..\..\EasyHook 2.6;..\..\..\libxl-3.6.2.0\$(PlatformName);..\..\..\ntdll;..\..\..\libfcgiwrapper\Release;..\..\..\openssl-1.0.2c-release\$(PlatformName)\lib"
+				AdditionalLibraryDirectories=""
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				TargetMachine="1"
@@ -96,8 +96,8 @@
 		</Configuration>
 		<Configuration
 			Name="Debug|x64"
-			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
-			IntermediateDirectory="$(SolutionDir)generated\$(ProjectName)\$(ConfigurationName)$(PlatformName)\"
+			OutputDirectory="$(SolutionDir)_$(ConfigurationName)"
+			IntermediateDirectory="$(SolutionDir)_generated\$(ProjectName)\$(ConfigurationName)$(PlatformName)\"
 			ConfigurationType="1"
 			CharacterSet="1"
 			>
@@ -120,11 +120,11 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\..\tinyxml2;..\..\..\sqlite;..\..\..\protobuf-2.5.0\src;..\..\..\charconv;..\..\..\boost_1_55_0_HeadersOnly;..\..\..\zlibex2;..\..\..\mysql-dev-5.6\include;..\..\..\libcurl-7.26\include;..\..\..\slxcommon;..\..\..\rapidxml-1.13;..\..\..\libevent-2.0.21-stable\include;..\..\..\ExpatDll\expat_core;..\..\..\zeromq-4.1.1\include;..\..\..\vtd-xml\c++;..\..\..\http_parser;..\..\..\EasyHook 2.6;..\..\..\libxl-3.6.2.0\include_cpp;..\..\..\getopt;..\..\..\fcgi-2.4.1\include;..\..\..\libfcgiwrapper\libfcgiwrapper;..\..\..\deelx;..\..\..\rapidjson\include;..\..\..\Bins\gsoap;..\..\..\InputBox;..\..\..\InterfaceInvokeStat;..\..\..\openssl-1.0.2c-release\$(PlatformName)\include;..\..\..\snappy;..\..\..\poco-1.4.6p4\Net\include;..\..\..\poco-1.4.6p4\Util\include;..\..\..\poco-1.4.6p4\Foundation\include;..\..\..\poco-1.4.6p4\XML\include"
-				PreprocessorDefinitions="WIN32;_WIN32_WINNT=0x500;WINVER=0x500;_DEBUG;_WINDOWS"
+				AdditionalIncludeDirectories=""
+				PreprocessorDefinitions="WIN32;_WIN32_WINNT=0x601;WINVER=0x601;_WIN32_IE=0x500;_DEBUG;_WINDOWS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
-				RuntimeLibrary="3"
+				RuntimeLibrary="1"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
 				DebugInformationFormat="3"
@@ -140,10 +140,10 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="gdiplus.lib Shlwapi.lib Ws2_32.lib Shell32.lib ComCtl32.Lib IPHlpApi.Lib RpcRT4.Lib wldap32.lib PsApi.lib WinMM.Lib WtsApi32.lib Version.lib Snmpapi.lib Mpr.lib Dnsapi.lib Wininet.lib Winhttp.lib"
+				AdditionalDependencies="gdiplus.lib Shlwapi.lib Ws2_32.lib Shell32.lib ComCtl32.Lib IPHlpApi.Lib RpcRT4.Lib wldap32.lib PsApi.lib WinMM.Lib WtsApi32.lib Version.lib Snmpapi.lib Mpr.lib Dnsapi.lib Wininet.lib Winhttp.lib oleacc.lib"
 				OutputFile="$(OutDir)\$(ProjectName)64.exe"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="..\..\..\mysql-dev-5.6\lib$(PlatformName);..\..\..\boost_1_55_0_HeadersOnly\stage\lib$(PlatformName);..\..\..\ExpatDll\Release;..\..\..\zeromq-4.1.1\zeromq_dll\Release;..\..\..\EasyHook 2.6;..\..\..\libxl-3.6.2.0\$(PlatformName);..\..\..\ntdll;..\..\..\libfcgiwrapper\Release;..\..\..\openssl-1.0.2c-release\$(PlatformName)\lib"
+				AdditionalLibraryDirectories=""
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				TargetMachine="17"
@@ -173,8 +173,8 @@
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
-			IntermediateDirectory="$(SolutionDir)generated\$(ProjectName)\$(ConfigurationName)$(PlatformName)\"
+			OutputDirectory="$(SolutionDir)_$(ConfigurationName)"
+			IntermediateDirectory="$(SolutionDir)_generated\$(ProjectName)\$(ConfigurationName)$(PlatformName)\"
 			ConfigurationType="1"
 			CharacterSet="1"
 			WholeProgramOptimization="1"
@@ -198,8 +198,8 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="..\..\..\tinyxml2;..\..\..\sqlite;..\..\..\protobuf-2.5.0\src;..\..\..\charconv;..\..\..\boost_1_55_0_HeadersOnly;..\..\..\zlibex2;..\..\..\mysql-dev-5.6\include;..\..\..\libcurl-7.26\include;..\..\..\slxcommon;..\..\..\rapidxml-1.13;..\..\..\libevent-2.0.21-stable\include;..\..\..\ExpatDll\expat_core;..\..\..\zeromq-4.1.1\include;..\..\..\vtd-xml\c++;..\..\..\http_parser;..\..\..\EasyHook 2.6;..\..\..\libxl-3.6.2.0\include_cpp;..\..\..\getopt;..\..\..\fcgi-2.4.1\include;..\..\..\libfcgiwrapper\libfcgiwrapper;..\..\..\deelx;..\..\..\rapidjson\include;..\..\..\Bins\gsoap;..\..\..\InputBox;..\..\..\InterfaceInvokeStat;..\..\..\openssl-1.0.2c-release\$(PlatformName)\include;..\..\..\snappy;..\..\..\poco-1.4.6p4\Net\include;..\..\..\poco-1.4.6p4\Util\include;..\..\..\poco-1.4.6p4\Foundation\include;..\..\..\poco-1.4.6p4\XML\include"
-				PreprocessorDefinitions="WIN32;_WIN32_WINNT=0x500;WINVER=0x500;NDEBUG;_WINDOWS"
+				AdditionalIncludeDirectories=""
+				PreprocessorDefinitions="WIN32;_WIN32_WINNT=0x601;WINVER=0x601;_WIN32_IE=0x500;NDEBUG;_WINDOWS"
 				RuntimeLibrary="0"
 				EnableFunctionLevelLinking="true"
 				UsePrecompiledHeader="0"
@@ -217,9 +217,9 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="gdiplus.lib Shlwapi.lib Ws2_32.lib Shell32.lib ComCtl32.Lib IPHlpApi.Lib RpcRT4.Lib wldap32.lib PsApi.lib WinMM.Lib WtsApi32.lib Version.lib Snmpapi.lib Mpr.lib Dnsapi.lib Wininet.lib Winhttp.lib"
+				AdditionalDependencies="gdiplus.lib Shlwapi.lib Ws2_32.lib Shell32.lib ComCtl32.Lib IPHlpApi.Lib RpcRT4.Lib wldap32.lib PsApi.lib WinMM.Lib WtsApi32.lib Version.lib Snmpapi.lib Mpr.lib Dnsapi.lib Wininet.lib Winhttp.lib oleacc.lib"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories="..\..\..\mysql-dev-5.6\lib$(PlatformName);..\..\..\boost_1_55_0_HeadersOnly\stage\lib$(PlatformName);..\..\..\ExpatDll\Release;..\..\..\zeromq-4.1.1\zeromq_dll\Release;..\..\..\EasyHook 2.6;..\..\..\libxl-3.6.2.0\$(PlatformName);..\..\..\ntdll;..\..\..\libfcgiwrapper\Release;..\..\..\openssl-1.0.2c-release\$(PlatformName)\lib"
+				AdditionalLibraryDirectories=""
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				OptimizeReferences="2"
@@ -251,8 +251,8 @@
 		</Configuration>
 		<Configuration
 			Name="Release|x64"
-			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
-			IntermediateDirectory="$(SolutionDir)generated\$(ProjectName)\$(ConfigurationName)$(PlatformName)\"
+			OutputDirectory="$(SolutionDir)_$(ConfigurationName)"
+			IntermediateDirectory="$(SolutionDir)_generated\$(ProjectName)\$(ConfigurationName)$(PlatformName)\"
 			ConfigurationType="1"
 			CharacterSet="1"
 			WholeProgramOptimization="1"
@@ -277,9 +277,9 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="..\..\..\tinyxml2;..\..\..\sqlite;..\..\..\protobuf-2.5.0\src;..\..\..\charconv;..\..\..\boost_1_55_0_HeadersOnly;..\..\..\zlibex2;..\..\..\mysql-dev-5.6\include;..\..\..\libcurl-7.26\include;..\..\..\slxcommon;..\..\..\rapidxml-1.13;..\..\..\libevent-2.0.21-stable\include;..\..\..\ExpatDll\expat_core;..\..\..\zeromq-4.1.1\include;..\..\..\vtd-xml\c++;..\..\..\http_parser;..\..\..\EasyHook 2.6;..\..\..\libxl-3.6.2.0\include_cpp;..\..\..\getopt;..\..\..\fcgi-2.4.1\include;..\..\..\libfcgiwrapper\libfcgiwrapper;..\..\..\deelx;..\..\..\rapidjson\include;..\..\..\Bins\gsoap;..\..\..\InputBox;..\..\..\InterfaceInvokeStat;..\..\..\openssl-1.0.2c-release\$(PlatformName)\include;..\..\..\snappy;..\..\..\poco-1.4.6p4\Net\include;..\..\..\poco-1.4.6p4\Util\include;..\..\..\poco-1.4.6p4\Foundation\include;..\..\..\poco-1.4.6p4\XML\include"
-				PreprocessorDefinitions="WIN32;_WIN32_WINNT=0x500;WINVER=0x500;NDEBUG;_WINDOWS"
-				RuntimeLibrary="2"
+				AdditionalIncludeDirectories=""
+				PreprocessorDefinitions="WIN32;_WIN32_WINNT=0x601;WINVER=0x601;_WIN32_IE=0x500;NDEBUG;_WINDOWS"
+				RuntimeLibrary="0"
 				EnableFunctionLevelLinking="true"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
@@ -296,10 +296,10 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="gdiplus.lib Shlwapi.lib Ws2_32.lib Shell32.lib ComCtl32.Lib IPHlpApi.Lib RpcRT4.Lib wldap32.lib PsApi.lib WinMM.Lib WtsApi32.lib Version.lib Snmpapi.lib Mpr.lib Dnsapi.lib Wininet.lib Winhttp.lib"
+				AdditionalDependencies="gdiplus.lib Shlwapi.lib Ws2_32.lib Shell32.lib ComCtl32.Lib IPHlpApi.Lib RpcRT4.Lib wldap32.lib PsApi.lib WinMM.Lib WtsApi32.lib Version.lib Snmpapi.lib Mpr.lib Dnsapi.lib Wininet.lib Winhttp.lib oleacc.lib"
 				OutputFile="$(OutDir)\$(ProjectName)64.exe"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories="..\..\..\mysql-dev-5.6\lib$(PlatformName);..\..\..\boost_1_55_0_HeadersOnly\stage\lib$(PlatformName);..\..\..\ExpatDll\Release;..\..\..\zeromq-4.1.1\zeromq_dll\Release;..\..\..\EasyHook 2.6;..\..\..\libxl-3.6.2.0\$(PlatformName);..\..\..\ntdll;..\..\..\libfcgiwrapper\Release;..\..\..\openssl-1.0.2c-release\$(PlatformName)\lib"
+				AdditionalLibraryDirectories=""
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				OptimizeReferences="2"
@@ -348,12 +348,24 @@
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
+			<File
+				RelativePath=".\resource.h"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="资源文件"
 			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav"
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 			>
+			<File
+				RelativePath=".\res\MultiWeChat.ico"
+				>
+			</File>
+			<File
+				RelativePath=".\res\MultiWeChat.manifest"
+				>
+			</File>
 			<File
 				RelativePath=".\MultiWeChat.rc"
 				>
